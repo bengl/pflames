@@ -1,0 +1,30 @@
+{
+  "name": "pflames",
+  "version": "0.0.0",
+  "description": "Easy flamegraphs, with diffs, for Node.js and Chrome",
+  "main": "index.js",
+  "scripts": {
+    "install": "node install.js"
+  },
+  "bin": "./bin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bengl/pflames.git"
+  },
+  "keywords": [
+    "flamegraph",
+    "flamechart",
+    "performance",
+    "perf"
+  ],
+  "author": "Bryan English <bryan@bryanenglish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bengl/pflames/issues"
+  },
+  "homepage": "https://github.com/bengl/pflames#readme",
+  "dependencies": {
+    "cpuprofile2stackcollapse": "^1.0.0",
+    "opn": "^5.3.0"
+  }
+}
