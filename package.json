@@ -1,6 +1,6 @@
 {
   "name": "pflames",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Easy flamegraphs, with diffs, for Node.js and Chrome",
   "main": "index.js",
   "scripts": {
