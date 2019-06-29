@@ -56,7 +56,15 @@ function preprocessedToStacks() {
       callback();
     },
     flush(callback) {
-      var data = JSON.parse(Buffer.concat(this._bufs).toString());
+      let data = Buffer.concat(this._bufs).toString();
+      let firstNewline = data.indexOf('\n');
+      if (
+        data.substring(0, firstNewline) === 'Testing v8 version different from logging version'
+      ) {
+        data = data.substr(firstNewline + 1);
+      }
+      data = data.replace(/^\n/, '');
+      data = JSON.parse(data);
       const stacks = {};
       data.ticks.forEach(tick => {
         const converted = tick.s.map(n => data.code[n]).reverse();
