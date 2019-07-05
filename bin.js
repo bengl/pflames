@@ -9,6 +9,16 @@ const path = require('path');
 const opn = require('opn');
 const os = require('os');
 
+if (process.argv[2] === 'attach') {
+  require('./tools/attach.js');
+  return;
+}
+
+if (process.argv[2] === 'run') {
+  require('./tools/run.js');
+  return;
+}
+
 let args = process.argv.slice(2);
 let icicleArgs = [];
 
