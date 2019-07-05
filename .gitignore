@@ -1,0 +1,6 @@
+node_modules
+FlameGraph
+perf.data
+perf.data.old
+*.html
+*.log
